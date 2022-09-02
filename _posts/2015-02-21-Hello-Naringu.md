@@ -5,7 +5,7 @@ categories:
 - naringu
 ---
 Haha! I think it's no need! Just go down and have fun!
-#Naringu is a hacker like jekyll dark theme, it's based on [Poole](http://getpoole.com), the Jekyll butler.
+<!--Naringu is a hacker like jekyll dark theme, it's based on [Poole](http://getpoole.com), the Jekyll butler.-->
 
 ### Built on Poole
 

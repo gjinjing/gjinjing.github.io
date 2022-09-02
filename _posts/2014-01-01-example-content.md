@@ -8,7 +8,7 @@ categories:
 
 <div class="message">
 Howdy! Here you can chase your dream.
-#  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+<!--#  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.-->
 </div>
 
 
