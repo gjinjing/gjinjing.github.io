@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Hello Naringu!
+title: Hello! Let me introduce myself?
 categories:
 - naringu
 ---
-
-Naringu is a hacker like jekyll dark theme, it's based on [Poole](http://getpoole.com), the Jekyll butler.
+Haha! I think it's no need! Just go down and have fun!
+#Naringu is a hacker like jekyll dark theme, it's based on [Poole](http://getpoole.com), the Jekyll butler.
 
 ### Built on Poole
 
