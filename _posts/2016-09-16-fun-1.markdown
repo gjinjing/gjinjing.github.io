@@ -9,7 +9,6 @@ author: gjinjing
 
 All songs collected from websites, including mv and learning videos.
 
-<!--![]({{site.baseurl}}/images/lost-9.jpg)-->
 
 <a href='https://space.bilibili.com/1652293036?spm_id_from=333.337.0.0'>Hpmi in Bilibili</a>
 
