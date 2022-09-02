@@ -2,28 +2,44 @@
 layout: default
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<header class="post-header">
+<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site_url }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+   <p class="post-metadata">
+   <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+       <i class="fa fa-calendar" aria-hidden="true"></i> {{ page.date | date: "%b %-d, %Y" }}
+    </time>
+    
+    {% if page.author %}  &nbsp;&nbsp; 
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><i class="fa fa-user" aria-hidden="true"></i> {{ page.author }}</span></span>{% endif %}
 
-<div class="comments">
-    {% include comments.html %}
-</div>
+{% if page.categories %}  &nbsp;&nbsp; 
+   <span><i class="fa fa-tag" aria-hidden="true"></i> {% assign tags = page.categories %}{% for tag in tags %}{{tag}}{% unless forloop.last %},&nbsp;{% endunless %}{% endfor %}</span>
+{% endif %}
+
+
+{% assign words = content | strip_html | number_of_words %}
+ &nbsp;&nbsp; 
+   <span><i class="fa fa-clock-o" aria-hidden="true"></i> 
+{% if words < 360 %}
+ 1 min
+{% else %}
+  {{ words | divided_by:180 }} mins 
+{% endif %}
+</span>
+</p>
+
+</header>
+<div class="post-content" itemprop="articleBody">{{ content }}</div>
+
+
+</article>
+{% include share.html %}
+
+
+{% if site.disqus-shortname %}
+{% include disqus.html %}
+{% endif %}
+<br />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">

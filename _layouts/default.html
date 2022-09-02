@@ -1,45 +1,49 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
+{% include head.html %}
 
-  {% include head.html %}
-  {% include analytics.html %}
-
-<body class="theme-6dd">
-
+<body>
+   <div class="container">
+       
     {% include sidebar.html %}
 
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->   
+        <div id="main">
+
+             {% include header.html %}
+                    <div class="page-content">
+                        <div class="wrapper">
+                            {{ content }}
+                        </div>
+                    {% include footer.html %}
+                    </div>
+                {% if site.analytics %}
+                    {% include analytics.html %}
+                {% endif %}  
         </div>
-      </div>
+        
+        
+        
+        
+        
+<script>
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    }
 
-      <div class="container content">
-        {{ content }}
-      </div>
-    </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-
-{% include footer.html %}
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+        
+        
+</div>            
+        
+</body>
+</html>
