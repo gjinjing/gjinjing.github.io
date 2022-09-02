@@ -6,8 +6,8 @@ date:   2022-09-3 10:50:00 +0530
 categories: fun
 author: gjinjing
 ---
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
 
+All songs collected from websites, including mv and learning videos.
 
 <!--![]({{site.baseurl}}/images/lost-9.jpg)-->
 
