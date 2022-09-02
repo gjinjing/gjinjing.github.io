@@ -9,6 +9,7 @@ active: active
 
 I would like to hear from my readers.
 
+<!--
 <form id="contact-form" class="form" action="https://getsimpleform.com/messages?form_api_token={{site.simpleform-token}}" method="POST" enctype="multipart/form-data">
         <ul class="contact-ul">
             <li class="contact-li">
@@ -87,4 +88,4 @@ ul.contact-ul {
     margin-bottom: 1em;
 }
 
-</style>
+</style>-->
