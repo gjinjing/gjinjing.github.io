@@ -6,10 +6,10 @@ date:   2022-09-3 10:50:00 +0530
 categories: fun
 author: gjinjing
 ---
-
 MV see :
 <a href='https://space.bilibili.com/1652293036?spm_id_from=333.337.0.0'>Hpmi in Bilibili</a>
 
+<br />
 
 急な夕立
 
@@ -36,7 +36,6 @@ ji kan / tsu bu shi / ja ke ka / i no / hon
 ka ke ga / e no / nai ni chi / jou cho i / e kkyou
 
 
-<br />
 <br />
 
 夏椿
