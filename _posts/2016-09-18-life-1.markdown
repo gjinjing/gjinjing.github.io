@@ -7,13 +7,4 @@ author: Gjinjing
 ---
 
 ![]({{site.baseurl}}/images/lost-1.jpg)
-<p>
-  <span>速率控制：</span>
-  <select id="select" onchange="changeRate()">
-     <option value="1" selected>1</option>
-     <option value="0.5">0.5</option>
-     <option value="0.75">0.75</option>
-     <option value="2">2</option>
-  </select>
-</p>
 <audio src="../music/crossaline.mp3" controls id="audio"></audio>
