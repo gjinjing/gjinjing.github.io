@@ -7,4 +7,4 @@ author: Gjinjing
 ---
 
 ![]({{site.baseurl}}/images/lost-1.jpg)
-<audio src="../music/crossaline.mp3" controls id="audio"></audio>
+<audio src="../music/crossaline.mp3" controls id="audio" controlsList="nodownload" ></audio>
