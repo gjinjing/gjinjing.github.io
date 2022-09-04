@@ -48,7 +48,7 @@ markdown: kramdown
 include: [_pages] # Includes files inside _pages directory [Do not remove this]
 
 author:
-  name: Gjinjing
+  name: JOJO
   image: ashwat.jpg # The author image will be shown on the header. Place this image in /images/ folder.
 #  about: 
 #  twitter: gjinjing  # https://twitter.com/ is automatically added
