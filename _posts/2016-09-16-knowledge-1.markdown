@@ -18,3 +18,8 @@ function loopy(){
 
 Question (1)
 ![]({{site.baseurl}}/images/Mechanics/Ques-1.png)
+![]({{site.baseurl}}/images/Mechanics/Ques-1-Answer.png)
+
+<br />
+
+
