@@ -8,3 +8,4 @@ author: JOJO
 ---
 
 Question (1)
+Exercise: Use following 3 txt files and draw them on one canvas!
