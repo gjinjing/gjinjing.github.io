@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "【cern root】用高斯/BW/uniform产生数据并用高斯/BW进行拟合"
+description: 简单来说，就是先随机生成一组数据，再用函数去描述这组数据，找函数的过程就是拟合的过程。
+date:   2022-11-16 22:47:00 +0530
+categories: knowledge
+author: gjinjing
+---
+
+在terminal里面输入 vi lesson1.C 新建一个C++ code ，
+将以下内容复制粘贴进这个file， wq保存退出，
+root -l lesson1.C 就可以运行啦。
+（默认你已经安装好root）
+
+#include "TCanvas.h"
+#include "TF1.h"
+#include "TRandom.h"
+
+void BreitGau()
+{
+  Int_t n = 10000;
+  Int_t i;
+  TCanvas* c1 = new TCanvas ("c1","Fitting with Gaussian function");
+  TRandom h1;
+  c1->SetGrid();
+  float mylow=2.97,myhigh=3.03;
+  float mymean=3,mywidth=0.005;
+  TH1F * myth1f = new TH1F("myth1f","myth1f",200,mylow,myhigh);
+  for (i=0;i<n;i++)
+  {
+  //    myth1f->Fill(h1.Gaus(mymean,mywidth));
+      myth1f->Fill(h1.BreitWigner(mymean,mywidth));
+  }
+  myth1f->Draw();
+  for (i=0;i<50000;i++)
+  {
+    myth1f->Fill(h1.Uniform(mylow,myhigh));
+  }
+  myth1f->Draw();
+// TF1 *total = new TF1("mstotal","gaus(0)+gaus(3)+gaus(6)",-5,15);
+//  TF1 *total1 = new TF1("total1","[0]+[1]*exp(-(x-[2])*(x-[2])/2.0/[3]/[3])",mylow,myhigh);
+  TF1 *total1 = new TF1("total1","[0]+[1]*([3]/2)/(3.14*((x-[2])*(x-[2])+([3]/2)*([3]/2)))",mylow,myhigh);
+  Double_t par[4];
+ // myth1f->Fit(g1,"R");
+  //total1->GetParameters(&par[4]);
+  /*total1->SetParameter(0,50000);
+  total1->SetParameter(1,10000);
+  total1->SetParameter(2,5.0);
+  total1->SetParameter(3,0.5);*/
+  total1->SetParameters(50000,100,mymean,mywidth);//设置par[4]的四个参数
+  total1->SetParLimits(2,2.9,3.1);//设置par[2]的上下限
+  total1->SetParLimits(3,0.004,0.006);
+  //total1->Draw();
+  myth1f->Fit(total1,"R");
+
+}
