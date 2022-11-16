@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "打开了terminal，安装好root之后，我能够做些什么？"
+description: 一些简单的linux和C++指令
+date:   2022-11-16 22:59:00 +0530
+categories: knowledge
+author: gjinjing
+---
+
+友好的人机界面向terminal的转换，你需要熟悉一些linux命令：
+<br/>
+首先，打开一个terminal，你想知道自己的位置在哪里，在最下面的命令行中输入pwd后回车，界面会显示你当前的路径。
+<br/>
+可是你并不是很熟悉你的电脑，这个路径你甚至不知道下面有什么内容，输入ls后回车，界面会显示当前路径下的非隐藏文件。
+你还想知道这些文件是什么时候被修改的，大小是多少：输入ls -ltr后回车；
+你也想查看所有文件，包括隐藏文件：ls -a  （为展示方便，之后的引导统一省略“输入...后回车”，只展示命令本身）
+<br/>
+好，这下你应该完全知道自己的位置了，现在我们要去其他的文件夹中看一看。
+假如你当前的路径下有这些文件夹：Desktop Document Applications ...
+想要进入最熟悉的Desktop中：cd Desktop
+下意识地，你想知道桌面里有哪些文件：ls -ltr 或者 ls
+<br/>
+现在，和你整理其他东西一样，你想在桌面上新建一个用来学习编程的文件夹：mkdir code_learning
+再次ls -ltr一下，你会发现最下面多了刚刚新建的文件夹code_learning
+进到这个文件夹里：cd code_learning，就可以开始正式创建程序、开始编程啦！
+
+<br/>
+<br/>
+
+
