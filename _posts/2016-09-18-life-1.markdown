@@ -3,7 +3,7 @@ layout: post
 title:  "Don't know what to write!"
 description: Don't know what to write!
 categories: life
-author: JOJO
+author: gjinjing
 ---
 
 ![]({{site.baseurl}}/images/lost-1.jpg)

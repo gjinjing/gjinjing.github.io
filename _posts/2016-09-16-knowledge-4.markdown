@@ -4,7 +4,7 @@ title:  "Wiki for high energy physics"
 description: Explanation to some specific terms or questions
 date:   2022-09-11 10:50:00 +0530
 categories: knowledge
-author: JOJO
+author: gjinjing
 ---
 
 (1) sPlot : 
