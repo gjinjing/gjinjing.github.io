@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Exercise --- Mechanics"
+description: Well, just some exercise about mechanics
+date:   2016-09-13 10:50:00 +0530
+categories: knowledge
+author: gjinjing
+---
+
+<script LANGUAGE = "javascript">
+function loopy(){
+  var sWord = "";
+  while(sWord!="麦克斯韦方程组"){sWord=prompt("爱因斯坦相对论");}
+  alert("恭喜您回答正确");
+  }
+  loopy()
+  </script>
+
+Question (1)
+![]({{site.baseurl}}/images/Mechanics/Ques-1.png)
+![]({{site.baseurl}}/images/Mechanics/Ques-1-Answer.png)
+
+<br />
+
+
